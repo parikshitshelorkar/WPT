@@ -1,0 +1,36 @@
+public class Operations{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        menu(sc);
+    
+    }
+    void menu(Scanner sc){
+        
+        int key = sc.nextInt();
+
+    switch (key) {
+        case 1:
+            System.out.println("Enter the number of Employees: ");
+            int numOfEmp = sc.nextInt();
+            for(int i=1; i<=numOfEmp; i++){
+                System.out.println("Enter Employee ID: ");
+                int empId = sc.nextInt();
+                System.out.println("Enter Employee Name: ");
+                String empName = sc.next();
+                System.out.println("Enter Department:  ");
+                String department = sc.next();
+                System.out.println("Enter Basic Salary: ");
+                float bsasicSalary = sc.nextFloat();
+                Employee emp = new Employee();
+                // emp.acceptDetails(numOfEmp, empId, empName, department, bsasicSalary);
+            }
+
+          
+    
+        default:
+            break;
+    }        
+    }
+
+}
+}
