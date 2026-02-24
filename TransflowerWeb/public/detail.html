@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Welfare Club</title>
+    <nav><a href="index.html">Home</a> | <a href="about.html">About us</a> | <a href="contact.html">Contact Us</a> | <a
+            href="services.html">Services</a> | <a href="login.html">Login</a> | <a href="register.html">Register</a>
+    </nav>
+</head>
+
+<body>
+    <h1>Details</h1>
+    <hr />
+    <input id="username" type="text">
+    <input type="location" type="text">
+    
+    <button onclick="showData()">Show Data</button>
+    <p id="para1">Starting Information</p>
+    <p id="paraLocation">Location</p>
+    <script>
+        function showData() {
+            //getting reference of element whosee id is username
+            var txtUserName = document.getElementById("username");
+            var dataUserName = txtUserName.value;
+
+            var txtLocation = document.getElementById("location");
+            var dataLocation = txtLocation.value;
+
+            //get the reference of element whose id is para1
+            var paraUserName = document.getElementById("paraUserName");
+            paraUserName.innerHTML = dataUserName;
+            var paraLocation = document.getElementById("paraLocation");
+            paraLocation.innerHTML = dataLocation;
+
+        }
+    </script>
+
+</body>
+
+</html>
