@@ -7,6 +7,18 @@
 <body>
     <h1>Contact</h1>
     <a href="/">Home</a> | <a href="about.html">About us </a> | <a href="contact.html">Contact Us </a> | <a href="detail.html">Details</a> | <a href="services.html">Services</a> | <a href="login.html">login</a> | <a href="register.html">Register</a>
-    
+    <hr>
+    <p id="para1">This is the simple sentence...</p>
+    <p id="para2">Seed Infotech private limited</p>
+    <button onclick="onChangeClick()">Change the content!</button>
+    <script>
+        var onChangeClick = function(){
+            alert("button pressed");
+            //DOM - tree
+            var element = document.getElementById("para1");
+            element.innerHTML = "TransFlower Private Limited..!";
+
+        }
+    </script>
 </body>
 </html>

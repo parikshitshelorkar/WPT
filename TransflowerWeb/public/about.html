@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Transflower Web</title>
-</head>
+<html>
+    <head>
+        <title>Transflower Web</title>
+    </head>
+    <body>
+        <h1>login</h1>
+            <table>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="text" name="emial" id="username" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" name="password" id="password" required /></td>
+                </tr>
+                <tr>
+                    <td><label></label></td>
+                    <td><button onclick="validateUserClientside()">Login</button></td>
+                </tr>
+            </table>
+        <div id="result"></div>
+        <a href="register.html" > Register new user </a>
+        <script>
+            var validateUserClientside=function(){
+                if(typeof(Storage)!=="underfined"){
+                    var strValidUser= localStorage.getItem("validuser");
+                    var validUser= JSON.parse(strValidUser);
 
-<body>
-    <h1>About Us</h1>
-    <a href="/">Home</a> | <a href="about.html">About us </a> | <a href="contact.html">Contact Us </a> | <a href="detail.html">Details</a> | <a href="services.html">Services</a> | <a href="login.html">login</a> | <a href="register.html">Register</a>
-    
-</body>
+                    var txtUserName= document.getElementById("username");
+                    var username= txtUserName.value ;
+
+                    var txtPassword= document.getElementById("password");
+                    var password=txtPassword.value ;
+
+                    var status= false;
+                    if(validUser.username=== username && validUser.password=== password){
+                        status = true;
+                    }
+                    if(status){
+                        var DivId= document.getElementById("result");
+                        DivId.innerHTML= "login successful";
+                    }
+                    else{
+                        var DivId= document.getElementById("result");
+                        DivId.innerHTML= "invalid credentials , please try again";
+                    }
+                }
+            }
+        </script>
+    </body>
 </html>

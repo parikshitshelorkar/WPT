@@ -1,12 +1,21 @@
 var express = require('express');
 var path = require('path');
 const { request } = require('http');
+var bodyParser = require('body-parser');
 
 var app = express();//get global object from framework
+
+//configuring midleware
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.json());
+
+//configure public folder to express module
 
 var staticMiddleware = express.static(path.join(__dirname, "public"));
 //Express framework configuration
 app.use(staticMiddleware);
+
+
 
 //Express framework setting handlers 
 
@@ -14,15 +23,24 @@ app.get("/", (request, response) => {
     response.sendFile(__dirname + "/index.html");
 });
 
-
-app.listen(9000);
-console.log("Express web app is listening on port 9000");
-
-app.post("login", (request, response) => {
+app.post("/login", (request, response) => {
+  var user = request.body;
+  console.log(request.body);
+  // if(user.email == "parikshitshelorkar@gmail.com" && user.password == "123"){
+  //   console.log("Valid User");
+  //   response.send("Welcome to TFl")
+  // }
+  // else{
+  //   console.log("Invalid User");
+  // }
   console.log("Login form is posted by browser is received by server");
 });
 
-app.post("register", (request, response)=>{
+app.post("/register", (request, response)=>{
+  console.log(request.body);
   console.log("Register form is posted by broweser is received by server");
 });
 
+
+app.listen(9000);
+console.log("Express web app is listening on port 9000");

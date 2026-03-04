@@ -14,9 +14,11 @@
     <h1>Details</h1>
     <hr />
     <input id="username" type="text">
+    <br>
     <input type="location" type="text">
-    
+    <br>
     <button onclick="showData()">Show Data</button>
+    <br>
     <p id="para1">Starting Information</p>
     <p id="paraLocation">Location</p>
     <script>
@@ -33,6 +35,14 @@
             paraUserName.innerHTML = dataUserName;
             var paraLocation = document.getElementById("paraLocation");
             paraLocation.innerHTML = dataLocation;
+
+            //Document Object Model : DOM
+            //Application Programmer Ineterface (built in function by -- DOM)
+            //document.createElement --- will create New HTML Element
+            //document.removeChild ---- remove existing HTML element
+            //document.appendChild ---- will append child to html document
+            // document.write 
+        
 
         }
     </script>
