@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Rose",
+    "description": "A classic red flower symbolizing love and romance.",
+    "imageLink": "./images/rose.jpg",
+    "unitPrice": 50,
+    "quantity": 100,
+    "likes": 230
+  },
+  {
+    "id": 2,
+    "title": "Tulip",
+    "description": "A bright and cheerful spring flower available in many colors.",
+    "imageLink": "./images/tulip.webp",
+    "unitPrice": 40,
+    "quantity": 80,
+    "likes": 180
+  },
+
+  {
+    "id": 3,
+    "title": "Sunflower",
+    "description": "A large yellow flower that follows the sun.",
+    "imageLink": "./images/sunflower.jpg",
+    "unitPrice": 60,
+    "quantity": 60,
+    "likes": 300
+  },
+  {
+    "id": 4,
+    "title": "Lily",
+    "description": "An elegant flower often used in celebrations and ceremonies.",
+    "imageLink": "./images/lily.jpg",
+    "unitPrice": 70,
+    "quantity": 50,
+    "likes": 210
+  },
+  {
+    "id": 5,
+    "title": "Orchid",
+    "description": "A beautiful exotic flower known for its unique shape.",
+    "imageLink": "./images/orchid.jpg",
+    "unitPrice": 120,
+    "quantity": 30,
+    "likes": 260
+  },
+  {
+    "id": 6,
+    "title": "Daisy",
+    "description": "A simple white flower with a yellow center symbolizing innocence.",
+    "imageLink": "./images/daisy.jpg",
+    "unitPrice": 30,
+    "quantity": 120,
+    "likes": 150
+  },
+  {
+    "id": 7,
+    "title": "Marigold",
+    "description": "A vibrant orange and yellow flower used in festivals.",
+    "imageLink": "./images/marigold.jpg",
+    "unitPrice": 25,
+    "quantity": 200,
+    "likes": 170
+  },
+  {
+    "id": 8,
+    "title": "Lotus",
+    "description": "A sacred flower in many cultures, symbolizing purity.",
+    "imageLink": "./images/lotus.jpg",
+    "unitPrice": 90,
+    "quantity": 40,
+    "likes": 280
+  }
+]

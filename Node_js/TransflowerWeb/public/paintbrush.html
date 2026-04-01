@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Brush</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <h1 style="color:blueviolet; font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">This is paint brush</h1>
+    
+    <script>
+        function drawLine(){
+            //DOM
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            //draw line
+            ctx.move(10, 10);
+            ctx.lineTO(200, 200);
+            ctx.stroke();
+        }
+        function drawRectange(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            //draw rectangle
+            ctx.fillStyle = "blue";
+            ctx.fillRect(300, 300, 150, 100);
+        }
+        function drawTriangle(){
+            var canvas = document.getElementById("myCanvas");
+            if (canvas.getContext){
+                var ctx=canvas.getContext("2d");
+                ctx.beginPath();
+                ctx.moveTo(75, 50);
+                ctx.lineTo(100, 75);
+                ctx.lineTo(100, 25);
+                ctx.fill();
+            }
+        }
+
+        function drawCircle(){
+            var canvas = document.getElementById("myCanvas");
+            if (canvas.getContext){
+                var ctx=canvas.getContext("2d");
+                
+                ctx.beginPath();
+                ctx.arc(50, 50, 40, 0, 2*Math.PI);
+                ctx.stroke();
+                ctx.fill();
+            }
+        }
+        //calling functions
+        drawLine();
+        drawTriangle();
+        drawTriangle();
+    </script>
+</body>
+</html>
+
+<!--basics
+syntax
+rules
+keyword
+using inbbuild library 
+searching onlinne
+patience to read documentation
+courage to apply and solve possible errors-->
